@@ -20,6 +20,7 @@ export const useWeatherStore = defineStore('weatherStore', {
 
   actions: {
     // Requires a pro subscription
+
     // async testDataRequest() {
     //   try {
     //     const { data } = await axios.get(
