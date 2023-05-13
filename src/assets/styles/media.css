@@ -1,0 +1,37 @@
+@media (max-width: 800px) {
+  .popup {
+    max-width: 100%;
+    width: 94%;
+    right: calc(50% - 47%);
+  }
+}
+
+@media (max-width: 600px) {
+  .header {
+    padding: 20px 0 10px;
+    background-color: #ffffff;
+  }
+  .header__inner {
+    display: flex;
+    flex-direction: column;
+  }
+  .header__logo {
+    margin-bottom: 20px;
+  }
+  .select__input-wrapper {
+    width: 200px;
+    position: relative;
+  }
+  .select__input-button {
+    padding: 10px 20px;
+  }
+
+  .main__title {
+    margin: 20px 0 15px;
+  }
+
+  /* .swiper-button-prev,
+  .swiper-button-next {
+    display: none !important;
+  } */
+}
