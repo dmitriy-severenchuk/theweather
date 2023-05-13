@@ -51,6 +51,8 @@ const getCityForecast = function () {
     if (cityInput.value.length > 2) {
       weatherStore.getWeatherData()
     }
+  } else {
+    alert('You have maximum number of cards - 5. Delete any to add another one.')
   }
 }
 
