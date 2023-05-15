@@ -3,7 +3,7 @@
     <div class="container">
       <div class="favorites__inner">
         <h2 class="main__title">Favorites</h2>
-        <p class="main__subtitle" v-if="favCities.length === 0">There is no cards yet</p>
+        <p class="main__subtitle" v-if="favCities.length === 0">There is no cards yet.</p>
         <ForecastCatalog :getCardsArray="favCities" :favoritePage="true" />
       </div>
     </div>

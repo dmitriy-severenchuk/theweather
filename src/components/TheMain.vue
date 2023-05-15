@@ -7,6 +7,9 @@
         <div class="main__head">
           <SelectCityInput />
         </div>
+        <p class="main__subtitle" v-if="weatherArray.length === 0">
+          Find your city forecast using input above.
+        </p>
         <ForecastCatalog :getCardsArray="weatherArray" @CardIndex="removeForecastsCard" />
       </div>
     </div>
