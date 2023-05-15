@@ -6,7 +6,7 @@ export const useWeatherStore = defineStore('weatherStore', {
     showPopup: false,
     forecasts: [],
     cities: [],
-    geoCity: 'odesa'
+    geoCity: 'kyiv'
   }),
 
   getters: {
