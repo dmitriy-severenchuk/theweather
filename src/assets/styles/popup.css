@@ -1,0 +1,48 @@
+.popup-wrapper {
+  background-color: #83838391;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
+}
+.popup {
+  max-width: 600px;
+  width: 100%;
+  position: fixed;
+  top: 50px;
+  right: calc(50% - 300px);
+  background-color: #fff;
+  padding: 15px 20px;
+}
+.popup__title {
+  text-align: center;
+}
+.popup__box {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+.popup__box__button {
+  display: block;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  padding: 8px 40px;
+  color: #ffffff;
+  font-size: 22px;
+  background-color: #cccccc;
+  margin: 0 8px;
+}
+.popup__box__button--no {
+  background-color: #ff0202 !important;
+}
+.popup__box__button--no:hover {
+  background-color: #cd0606 !important;
+}
+.popup__box__button--yes {
+  background-color: #07c93e !important;
+}
+.popup__box__button--yes:hover {
+  background-color: #08a635 !important;
+}
