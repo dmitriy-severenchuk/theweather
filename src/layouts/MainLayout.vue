@@ -16,8 +16,7 @@ const weatherStore = useWeatherStore()
 let isReady = ref(false)
 
 const initData = async function () {
-  // await weatherStore.testDataRequest()
-  // await weatherStore.getGeolocation()
+  await weatherStore.getGeolocation()
   await weatherStore.getWeatherData()
   await weatherStore.getCities()
   isReady.value = true

@@ -6,7 +6,7 @@ export const useWeatherStore = defineStore('weatherStore', {
     isPopupShow: false,
     forecasts: [],
     cities: [],
-    geoCity: 'kyiv'
+    geoCity: ''
   }),
 
   getters: {
@@ -24,6 +24,7 @@ export const useWeatherStore = defineStore('weatherStore', {
         const { data } = await axios.get(
           'https://api.ipdata.co/?api-key=06546a806739a53288bed9db99007c4d3a0cc71c36c98263b6652aa7'
         )
+
         if (this.forecasts.length < 6) {
           this.geoCity = data.city
         }
@@ -103,6 +104,16 @@ export const useWeatherStore = defineStore('weatherStore', {
 
     togglePopup(value) {
       this.isPopupShow = value
+    },
+    getCityForecast(inputValue) {
+      if (this.forecasts.length < 5) {
+        this.geoCity = inputValue
+        if (inputValue.length > 2) {
+          this.getWeatherData()
+        }
+      } else {
+        alert('You have maximum number of cards - 5. Delete any to add another one.')
+      }
     },
 
     get() {

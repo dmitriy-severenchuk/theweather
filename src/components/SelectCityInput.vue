@@ -20,7 +20,7 @@
         </li>
       </ul>
     </div>
-    <button class="select__input-button" @click.prevent="getCityForecast()">+</button>
+    <button class="select__input-button" @click.prevent="getCityForecastFunc()">+</button>
   </div>
 </template>
 
@@ -32,7 +32,7 @@ import { onClickOutside } from '@vueuse/core'
 const weatherStore = useWeatherStore()
 const showDropdown = ref(false)
 const cityInput = ref('')
-
+const targetInputBox = ref(null)
 const filteredCities = ref([])
 
 const filterCities = function () {
@@ -45,23 +45,15 @@ const filterCities = function () {
   }
 }
 
-const getCityForecast = function () {
-  if (weatherStore.$state.forecasts.length < 5) {
-    weatherStore.$state.geoCity = cityInput.value
-    if (cityInput.value.length > 2) {
-      weatherStore.getWeatherData()
-    }
-  } else {
-    alert('You have maximum number of cards - 5. Delete any to add another one.')
-  }
+const getCityForecastFunc = () => {
+  weatherStore.getCityForecast(cityInput.value)
+  showDropdown.value = false
 }
 
 const setCity = function (city) {
   cityInput.value = city
   showDropdown.value = false
 }
-
-const targetInputBox = ref(null)
 
 onClickOutside(targetInputBox, () => (showDropdown.value = false))
 </script>

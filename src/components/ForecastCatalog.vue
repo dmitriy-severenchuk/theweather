@@ -68,7 +68,6 @@ export default defineComponent({
 
     const removeForecastsCard = function (index) {
       emit('CardIndex', index)
-
       weatherStore.togglePopup(true)
     }
 

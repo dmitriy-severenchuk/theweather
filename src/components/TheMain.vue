@@ -35,7 +35,7 @@ const agreeClose = () => {
 }
 
 const removeForecastsCard = function (index) {
-  // weatherStore.togglePopup(true)
+  weatherStore.togglePopup(true)
   currentIndex.value = index
 }
 </script>
